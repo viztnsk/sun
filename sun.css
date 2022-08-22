@@ -1,0 +1,63 @@
+body {
+  background-color: rgba(252, 191, 73);
+  max-width: 1280px;
+}
+header {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.love {
+  font-size: 70px;
+  font-family: Miracle;
+  font-style: normal;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+.snow {
+  --animation-name: snowfall;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.snow__flake {
+  position: relative;
+  top: -1.5em;
+  color: rgba(247, 127, 0);
+  animation-name: var(--animation-name);
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 1.5em));
+  }
+}
+.snow-toggle {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.snow-toggle__text {
+  font-size: 14px;
+  font-family: Miracle;
+  font-style: normal;
+  font-weight: 400;
+}
